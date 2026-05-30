@@ -86,9 +86,22 @@ async function Logout(req,res) {
     })
     
 }
+async function getMe(req,res){
+    const user=await userModel.findById(req.user.id)
+
+    res.status(200).json({
+        message:"User Details Fetched Successfully",
+        user:{
+            id:user._id,
+            username:user.username,
+            email:user.email
+        }
+    })
+}
 
 module.exports={
     registerUserController,
     Login,
-    Logout
+    Logout,
+    getMe
 }
