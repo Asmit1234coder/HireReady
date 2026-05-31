@@ -4,11 +4,11 @@ import "../auth.form.scss"
 
 const Login = () => {
 
-    /*const { loading, handleLogin } = useAuth()
+    const { loading, handleLogin } = useAuth()
     const navigate = useNavigate()
 
     const [ email, setEmail ] = useState("")
-    const [ password, setPassword ] = useState("")*/
+    const [ password, setPassword ] = useState("")
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -16,9 +16,9 @@ const Login = () => {
         navigate('/')
     }
 
-    /*if(loading){
+    if(loading){
         return (<main><h1>Loading.......</h1></main>)
-    }*/
+    }
 
 
     return (
